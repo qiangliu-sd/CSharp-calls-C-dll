@@ -22,6 +22,7 @@ public class QlDllC
     //public static extern IntPtr MessageBox(int hWnd, String text,
     //                String caption, uint type);
 
+    // UPDATE your dll path
     const string _C_DLL_PATH = "C:\\qlDev\\libc\\winCDynamic.dll";
 
     // do NOT use [Auto]; MUST be [Ansi]
