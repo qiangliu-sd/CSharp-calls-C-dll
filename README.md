@@ -18,7 +18,7 @@ Note: the default calling convention should be [__cdecl] in the VS2022 Compiler.
 Now, you can build your Windows dll and copy winCDynamic.dll to your desired folder (in my case libc, see [1](#notes)).
 
 ### C# calls C-dll functions
-To call dll functions in C#, you must pass the correct arguments (i.e., string, double, struct, or array) and return types. C array can only be returned as void*, which maps to IntPtr in C# and must be Marshal.Copy() back into the correct array (for example, double[]). C# struct has to be passed as ref to match a C struct*. Read the documentation directly in **cdllfuncs.cs** [(warning about path)](#notes) for what most of you need to know.
+To call dll functions in C#, you must pass the correct arguments (i.e., string, double, struct, or array) and return types. C array can only be returned as void*, which maps to IntPtr in C# and must be Marshal.Copy() back into the correct array (for example, double[]). C# struct has to be passed as ref to match a C struct*. Read the documentation directly in **cdllfuncs.cs** [(2. Warning about path)](#notes) for what most of you need to know.
 
 Create a C# Console App project, c4CsTest. Move cdllfuncs.cs and c4CSharp.cs to the project dir (i.e., c4CsTest), and delete program.cs. Build the c4CsTest project and execute the Console App, you will see three successful calls, such as qlDblRetArgs(). But you will get the following error as well:
 
