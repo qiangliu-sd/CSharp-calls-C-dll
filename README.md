@@ -15,6 +15,7 @@ set [Precompiled Headers] to [Not Using Precompiled Headers]
 Note: the default calling convention should be [__cdecl] in the VS2022 Compiler. If not, set as follows:
 - C/C++ -> Advanced: 
 		set [Calling Convention] to [__cdecl (/Gd)]
+
 Now, you can build your Windows dll and copy **winCDynamic.dll** to your desired folder (in my case libc, see [1](#notes)).
 
 ### C# calls C-dll functions
